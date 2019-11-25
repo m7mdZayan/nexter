@@ -18,7 +18,7 @@ body {
 .container {
   width: 100%;
   display: grid;
-  grid-template-rows: 80vh min-content 40vw repeat(3, auto);
+  grid-template-rows: 80vh auto auto repeat(3, auto);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
   .container > * {
     padding: 30px; }
@@ -87,7 +87,6 @@ body {
   grid-column: col-start 7 / -1; }
 
 .features {
-  background-color: #f9f7f6;
   grid-column: center-start / center-end;
   margin: 15rem 0;
   display: grid;
@@ -146,8 +145,57 @@ body {
   font-style: italic; }
 
 .homes {
-  background-color: #101d2c;
-  grid-column: center-start / center-end; }
+  grid-column: center-start / center-end;
+  margin: 15rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 7rem; }
+
+.home {
+  background-color: #f9f7f6;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+  .home__img {
+    width: 100%;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    z-index: 1; }
+  .home__like {
+    grid-column: 2 / 3;
+    grid-row: 1 /2;
+    fill: #c69963;
+    width: 2.5rem;
+    height: 2.5rem;
+    justify-self: end;
+    margin: 1rem 1.5rem 0 0;
+    z-index: 3; }
+  .home__name {
+    grid-column: 1 / -1;
+    width: 80%;
+    justify-self: center;
+    transform: translateY(-1.5rem);
+    z-index: 5;
+    font-size: 1.6rem;
+    font-family: "Josefin Sans", sans-serif;
+    text-align: center;
+    padding: 1.25rem;
+    background-color: #101d2c;
+    color: #fff;
+    font-weight: 400; }
+  .home__location, .home__rooms, .home__area, .home__price {
+    margin: 1.5rem 0;
+    display: flex;
+    font-size: 1.5rem;
+    margin-left: 1rem; }
+    .home__location svg, .home__rooms svg, .home__area svg, .home__price svg {
+      fill: #c69963;
+      width: 2rem;
+      height: 2rem;
+      margin-right: 1rem; }
+  .home__price, .home__area {
+    margin-bottom: 3rem; }
+  .home__button {
+    grid-column: 1 / -1; }
 
 .gallery {
   background-color: #54483a;
