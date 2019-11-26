@@ -76,7 +76,27 @@ body {
 .side-bar {
   background-color: #c69963;
   grid-column: sidebar-start / sidebar-end;
-  grid-row: 1 / -1; }
+  grid-row: 1 / -1;
+  display: flex;
+  justify-content: center; }
+
+.nav-btn {
+  border: none;
+  border-radius: 0;
+  margin-top: 2rem;
+  background-color: #fff;
+  height: 2px;
+  width: 4.5rem; }
+  .nav-btn::after, .nav-btn::before {
+    content: "";
+    background-color: #fff;
+    height: 2px;
+    width: 4.5rem;
+    display: block; }
+  .nav-btn::before {
+    transform: translateY(-1.2rem); }
+  .nav-btn::after {
+    transform: translateY(1.2rem); }
 
 .header {
   background-color: #54483a;
