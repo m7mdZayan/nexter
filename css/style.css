@@ -112,7 +112,7 @@ body {
   padding: 8rem;
   padding-top: 4rem;
   display: grid;
-  grid-template-rows: 1fr min-content 6rem 1fr;
+  grid-template-rows: 1fr max-content 6rem 1fr;
   grid-template-columns: max-content;
   justify-content: center;
   grid-row-gap: 1.5rem; }
@@ -122,8 +122,26 @@ body {
   .header__btn {
     align-self: start;
     justify-self: start; }
-  .header__seenon-logos img {
-    height: 2.5rem; }
+  .header__seenon-text {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-gap: 1rem;
+    font-size: 1.6rem;
+    align-items: center;
+    color: #aaa; }
+    .header__seenon-text::before, .header__seenon-text::after {
+      content: "";
+      height: 1px;
+      display: block;
+      background-color: currentColor; }
+  .header__seenon-logos {
+    display: flex;
+    justify-content: center; }
+    .header__seenon-logos img {
+      height: 2.5rem;
+      filter: brightness(70%); }
+      .header__seenon-logos img:not(:last-of-type) {
+        margin-right: 3.5rem; }
 
 .realtors {
   background-color: #101d2c;
