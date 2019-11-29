@@ -4,6 +4,11 @@
   text-align: center;
   padding: 3rem;
 
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: full-start / -1;
+    padding: 6rem 2rem;
+  }
+
   &__list {
     display: grid;
     grid-template-columns: min-content max-content;
@@ -11,6 +16,14 @@
     grid-row-gap: 5vh;
     align-items: center;
     justify-content: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-template-columns: repeat(3, min-content max-content);
+    }
+
+    @media only screen and (max-width: $bp-largest) {
+      grid-template-columns: min-content max-content;
+    }
   }
 
   &__img {
